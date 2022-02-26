@@ -1,3 +1,4 @@
 [submodule "themes/Midnight-Trilium-Dark-Mode"]
 	path = themes/Midnight-Trilium-Dark-Mode
 	url = git@github-cis:code-ink-space/Midnight-Trilium-Dark-Mode.git
+	update = merge
