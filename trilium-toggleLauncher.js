@@ -21,10 +21,13 @@ $(document).ready(function(){
 function toggleLauncher(x) {
     if (x <= 7)
         $('#launcher-pane').show().css({"display":"flex","opacity":"1"});
-    else if ( x <= 55 && $("#launcher-pane").css('display') == 'flex')
+    else if ( x <= 55 && $("#launcher-pane").css('display') == 'flex' )
         $('#launcher-pane').show().css("display","flex");
-    else
+    else if ($('div.dropdown.right-dropdown-widget.dropright.component.show > button').attr("aria-expanded") == "true") {
+        $('#launcher-pane').show().css("display","flex");
+    } else {
         document.querySelector('#launcher-pane').style.display='none';
+    }
 }
 function debounce(func, interval) {
     var lastCall = -1;
