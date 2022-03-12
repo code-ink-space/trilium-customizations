@@ -1,0 +1,4 @@
+/* how far from the bottom you need space for */
+.note-detail-editable-text-editor {
+    padding-bottom: 300px !important;
+}
