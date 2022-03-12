@@ -37,7 +37,7 @@ $(document).ready(function(){
         }
     );
 
-    /* show ribbon if note title input or note content area is in focus */
+    /* show ribbon if note title input is clicked else hide it */
     $("div.note-detail.component").on("click", function() {
         var foundfocus = false;
         notetitle.each(function() {
