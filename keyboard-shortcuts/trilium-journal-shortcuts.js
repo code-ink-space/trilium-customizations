@@ -18,3 +18,10 @@ api.bindGlobalShortcut("alt+w", async function(){
     await api.waitUntilSynced();
     api.activateNote(tommorrowNote.noteId);
 });
+api.bindGlobalShortcut("ctrl+alt+y", async function(){
+    let lastyear = new Date();
+    lastyear.setDate(lastyear.getDate() - 1);
+    const lastyearNote = await api.getDateNote(dayjs().subtract(1, 'year').format('YYYY-MM-DD'));
+    await api.waitUntilSynced();
+    api.activateNote(lastyearNote.noteId);
+});
